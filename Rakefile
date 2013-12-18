@@ -4,9 +4,9 @@ require 'foodcritic'
 
 task :default => [:foodcritic]
 
-FoodCritic::Rake::LintTask.new do |t|
-  t.options = {
-    :tags => %w( ~readme ),
+ 
+FoodCritic::Rake::LintTask.new do
+  options = {
+    fail_tags: ['any']
   }
 end
-
